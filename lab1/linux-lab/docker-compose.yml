@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  ubuntu:
+    build:
+      context: .
+    container_name: my-ubuntu
+    hostname: ubuntu
+    volumes:
+      - ubuntu-home:/home
+      - ubuntu-etc:/etc
+    tty: true
+    stdin_open: true
+
+volumes:
+  ubuntu-home:
+  ubuntu-etc:
